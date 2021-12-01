@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Myheader/>
-    <Mymain/>
+    <Myheader @search="savearray"/>
+    <Mymain :details="arraymovies"/>
   </div>
 </template>
 
@@ -14,6 +14,16 @@ export default {
   components: {
     Mymain,
     Myheader
+  },
+  data(){
+    return {
+      arraymovies:[]
+    }
+  },
+  methods:{
+    savearray(res){
+      this.arraymovies = res
+    }
   }
 }
 </script>
