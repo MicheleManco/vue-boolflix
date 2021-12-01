@@ -19,16 +19,6 @@ export default {
   props:{
     details:Array
   },
-  data() {
-  return {
-    
-  }
-},
-created() {
-},
-methods: {
-  
-}
 }
 
 
