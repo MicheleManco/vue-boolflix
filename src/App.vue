@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Myheader @search="savearray"/>
+    <Myheader @searchtv="savearraytv" @search="savearray"/>
     <Mymain :details="arraymovies"/>
   </div>
 </template>
@@ -17,12 +17,16 @@ export default {
   },
   data(){
     return {
-      arraymovies:[]
+      arraymovies:[],
+      arrayseries:[]
     }
   },
   methods:{
     savearray(res){
       this.arraymovies = res
+    },
+     savearraytv(res){
+      this.arrayseries = res
     }
   }
 }
