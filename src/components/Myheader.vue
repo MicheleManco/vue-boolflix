@@ -32,6 +32,7 @@ getmovies() {
       .then((lista) => {
         this.series = lista.data.results,
         this.$emit("searchtv", this.series)
+        console.log(this.series);
         })
   }
 }

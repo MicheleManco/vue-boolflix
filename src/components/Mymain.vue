@@ -9,7 +9,7 @@
         <div class="bandiera-lingua" v-else><img :src="require('@/assets/bandiera-lgbt.jpg')" alt="bandiera lgbt"></div>
         <div>{{movie.vote_average}}</div>
       </li>
-      <li v-for="serie,i in  detailstv" :key="i">
+      <li v-for="serie,x in  detailstv" :key="x">
         <div>{{serie.name}}</div>
         <div>{{serie.original_name}}</div>
         <div class="bandiera-lingua" v-if="serie.original_language === 'en'"><img :src="require('@/assets/bandiera-inglese.jpg')" alt="bandiera inglese"></div>
