@@ -9,6 +9,14 @@
         <div class="bandiera-lingua" v-else><img :src="require('@/assets/bandiera-lgbt.jpg')" alt="bandiera lgbt"></div>
         <div>{{movie.vote_average}}</div>
       </li>
+      <li v-for="serie,i in  detailstv" :key="i">
+        <div>{{serie.name}}</div>
+        <div>{{serie.original_name}}</div>
+        <div class="bandiera-lingua" v-if="serie.original_language === 'en'"><img :src="require('@/assets/bandiera-inglese.jpg')" alt="bandiera inglese"></div>
+        <div class="bandiera-lingua" v-else-if="serie.original_language === 'it'"><img :src="require('@/assets/bandiera-italiana.jpg')" alt="bandiera italiana"></div>
+        <div class="bandiera-lingua" v-else><img :src="require('@/assets/bandiera-lgbt.jpg')" alt="bandiera lgbt"></div>
+        <div>{{serie.vote_average}}</div>
+      </li>
     </ul>
   </div>
 </template>
@@ -19,7 +27,8 @@
 export default {
   name: 'Mymain',
   props:{
-    details:Array
+    details:Array,
+    detailstv: Array
   },
 }
 

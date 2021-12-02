@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Myheader @searchtv="savearraytv" @search="savearray"/>
-    <Mymain :details="arraymovies"/>
+    <Mymain :details="arraymovies" :detailstv="arrayseries"/>
   </div>
 </template>
 
