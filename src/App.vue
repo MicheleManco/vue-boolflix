@@ -33,6 +33,5 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@fontawesome/css/all.min.css';
 
 </style>

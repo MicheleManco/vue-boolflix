@@ -19,7 +19,7 @@
         <div class="bandiera-lingua" v-if="serie.original_language === 'en'"><img :src="require('@/assets/bandiera-inglese.jpg')" alt="bandiera inglese"></div>
         <div class="bandiera-lingua" v-else-if="serie.original_language === 'it'"><img :src="require('@/assets/bandiera-italiana.jpg')" alt="bandiera italiana"></div>
         <div class="bandiera-lingua" v-else><img :src="require('@/assets/bandiera-lgbt.jpg')" alt="bandiera lgbt"></div>
-        <div>{{createvote(serie.vote_average)}}</div>
+        <div>{{createvote(serie.vote_average)}} </div>
       </li>
     </ul>
   </div>
