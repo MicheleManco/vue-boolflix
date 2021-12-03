@@ -34,7 +34,7 @@ export default {
     return {
   }},
   props:{
-    details:Array,
+    details: Array,
     detailstv: Array
   },
   created() {
@@ -52,6 +52,10 @@ methods:{
 </script>
 
 <style scoped lang="scss">
+ul{
+  display: flex;
+  flex-wrap: wrap;
+}
 .bandiera-lingua {
 height: 20px;
 img {
