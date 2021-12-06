@@ -4,6 +4,7 @@
       <div id="titolo">BOOLFIX</div>
       <div>
         <input type="text" placeholder="cerca" v-model="query">
+        <!-- @keyup.enter="getmovies" -->
         <button @click.prevent="getmovies">cerca</button>
       </div>
       
@@ -20,26 +21,25 @@ export default {
   return {
     query: "",
     movies: [],
-    series:[]
+    series:[],
+    countresults: 0
   }
 },
-methods:{
 
+methods:{
 getmovies() {
     Axios
-    // ${this.query}
       .get(`https://api.themoviedb.org/3/search/movie?api_key=8792919fa773df65448b9f5dc7714686&language=it-US&query=${this.query}`)
       .then((lista) => {
         this.movies = lista.data.results,
         this.$emit("search", this.movies)
         }),
-// w342 dimensioni dell'img
     Axios
       .get(`https://api.themoviedb.org/3/search/tv?api_key=e99307154c6dfb0b4750f6603256716d&language=it_IT&query=${this.query}`)
       .then((lista) => {
         this.series = lista.data.results,
         this.$emit("searchtv", this.series)
-        })
+        }); 
   }
 }
 }

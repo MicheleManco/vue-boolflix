@@ -19,6 +19,8 @@
                   <span><i v-for="x in starsvuote" :key="x" class="far fa-star"></i></span>
                 </div> 
 
+                <div v-if="movie.overview" class="info">Description:{{movie.overview}}</div>
+
               </div>
             </div>
         </li>
@@ -39,6 +41,7 @@
                 <span><i v-for="(abc, i) in createvote(serie)" :key="i" class="fas fa-star"></i></span>
                 <span><i v-for="(def, x) in starsvuote" :key="x" class="far fa-star"></i></span>
               </div> 
+              <div v-if="serie.overview" class="info">Description:{{serie.overview}}</div>
 
           </div>
         </div>
@@ -86,6 +89,7 @@ computed:{
 #gray-bg {
   background-color: gray;
   padding: 40px 0;
+  min-height: 100vh;
   #container-posters{
     width: 80%;
     margin: 0px auto;
@@ -106,13 +110,14 @@ li {
   .container-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     display: none;
     color: white;
     height: 100%;
     width: 100%;
     padding: 5px;
+    overflow: scroll ;
+    overflow-x:hidden;
+    
     .info{
       margin:10px
     }
