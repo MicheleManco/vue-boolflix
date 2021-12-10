@@ -117,7 +117,6 @@ li {
     padding: 5px;
     overflow: scroll ;
     overflow-x:hidden;
-    
     .info{
       margin:10px
     }

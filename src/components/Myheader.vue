@@ -3,8 +3,7 @@
     <div id="container">
       <div id="titolo">BOOLFIX</div>
       <div>
-        <input type="text" placeholder="cerca" v-model="query">
-        <!-- @keyup.enter="getmovies" -->
+        <input type="text" placeholder="cerca" v-model="query" @keyup.enter="getmovies">
         <button @click.prevent="getmovies">cerca</button>
       </div>
       
